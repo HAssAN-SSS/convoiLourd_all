@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.layout{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 10% 90%;
+}
+.navbar{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1 ;
+    grid-row-end: 2;
+}
+.aside{
+    grid-column-start: 1;
+    /* grid-column-end: 3; */
+    grid-row-start: 2 ; 
+    grid-row-end: 3;
+}
+.main{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2 ; 
+    grid-row-end: 3;
+}

@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    /* width: 100%;
+    height: 85vh; */
+    background-color: rgb(60, 64, 69);
+    overflow-y: scroll;
+    font-size: 2vw;
+}
+.main::-webkit-scrollbar{
+    width: 5px;
+    background-color: rgb(169, 172, 175);
+}
+.main::-webkit-scrollbar-track{
+    background-color: rgb(129, 131, 133);
+}
+/* .main::-webkit-scrollbar-thumb{
+    background-color: rgb(14, 56, 94);
+} */
+.main::-webkit-scrollbar-button{
+    background-color: rgb(221, 223, 221);
+    border-radius: 12px;
+}
+
+.demande{
+    background-color:rgb(193, 193, 193);
+    width: 97%;
+    height: 14vh;
+    margin: 1.5%;
+    /* margin-right: 2%; */
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 0px 0px 8px rgb(255, 255, 255);
+    color: rgb(13, 13, 14);
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.demande:hover{
+    box-shadow: 0px 0px 4px rgb(255, 255, 255);
+
+
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+  }
+.circle-To_Do{
+    background-color: rgb(67, 138, 199);
+    width: 2%;
+    height: 100%;
+    margin: 0;
+    align-self: flex-start;
+    border-radius: 7px 0px 0px 7px ;
+    box-shadow: -6px 0px 10px  rgb(19, 100, 170);
+    
+}
+.circle-Demandes{
+    background-color: rgb(67, 138, 199);
+    width: 2%;
+    height: 100%;
+    margin: 0;
+    align-self: flex-start;
+    border-radius: 7px 0px 0px 7px ;
+    box-shadow: -6px 0px 10px  rgb(19, 100, 170);
+}
+.circle-Done{
+    background-color: rgb(47, 150, 116);
+    width: 2%;
+    height: 100%;
+    margin: 0;
+    align-self: flex-start;
+    border-radius: 7px 0px 0px 7px ;
+    box-shadow: -2px 0px 10px  rgb(19, 170, 77);
+}
+.circle-Accepted{
+    background-color: rgb(47, 150, 116);
+    width: 2%;
+    height: 100%;
+    margin: 0;
+    align-self: flex-start;
+    border-radius: 7px 0px 0px 7px ;
+    box-shadow: -2px 0px 10px  rgb(19, 170, 77);
+}
+.circle-Refused{
+    background-color: rgb(167, 49, 94);
+    width: 2%;
+    height: 100%;
+    margin: 0;
+    align-self: flex-start;
+    border-radius: 7px 0px 0px 7px ;
+    box-shadow: -2px 0px 10px  rgb(170, 27, 19);
+}
+.circle-Refused_{
+    background-color: rgb(167, 49, 94);
+    width: 2%;
+    height: 100%;
+    margin: 0;
+    align-self: flex-start;
+    border-radius: 7px 0px 0px 7px ;
+    box-shadow: -2px 0px 10px  rgb(170, 27, 19);
+}
+.dmd-item{
+    width: 20%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+.dmd-item-data{
+    color: rgb(18, 18, 18);
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    font-size: 1.6vw;
+    /* padding: 2%; */
+    width: 80%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+}

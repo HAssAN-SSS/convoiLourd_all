@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+.demandeinfo{
+    background-color: rgb(81, 83, 86);
+    text-align: center;
+    /* height: 45vh; */
+    /* width: 50%; */
+    border-radius: 7px;
+    font-size: 1.5vw;
+    padding-top: 3%;
+    /* box-shadow: 0px 0px 10px rgb(151, 150, 147); */
+}
+.demandeinfo:hover{
+    /* box-shadow: 0px 0px 0px rgb(151, 150, 147); */
+}
+.id-date-demande-info{
+    font-size: 70%;
+    margin: 2% 2% ;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+hr{
+    margin: 0 5%;
+    margin-bottom: 5%;
+    color: rgb(85, 85, 80);
+    box-shadow: 0px 1px 2px rgb(114, 114, 109) ;
+}
+.id-demande-info{
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+}
+.client-societe-demande-info{
+    font-size: 80%;
+    display: flex;
+    text-align: justify;
+    justify-content: space-around;
+    margin: 2%;
+
+}
+.client-info-demande-info{
+
+}
+/* .logo_societe{
+} */
+.societe-cliente-info{
+    text-align: center;
+
+}
+.client-info-demande-info-item{
+    margin-bottom: 1.5%;
+}
+.operatio-pointSorte-demande{
+    display: flex; 
+    flex-flow: column;
+
+}
+.operation-demande-info {
+    /* text-align: justify; */
+    display: flex;
+    justify-content: space-around;
+    font-size: 80%;
+    margin: 2%;
+}
+/* .operation-demande-info > b{
+    margin: 5%;
+} */
+.data-operation{
+    font-size: 83%;
+    
+}
+.operation-demande-info-case{
+    background-color: rgba(118, 173, 162, 0.452);
+    border-radius: 7px;
+    margin-bottom: 5%;
+    padding: 3%;
+}
+.Validatebtn{
+    background-color: rgba(38, 112, 55, 0.642);
+    font-size: 100%;
+    width: 30%;
+    height: 5vh;
+    margin: 2%;
+    outline: transparent;
+    border: 0cap;
+    color: aliceblue;
+}
+.Validatebtn:hover{
+    box-shadow: 3px 3px 3px  rgba(56, 135, 74, 0.642);
+   
+}
+.Validatebtn:active{
+    box-shadow: 0px 0px 0px  rgba(38, 112, 55, 0.642);
+   
+}
+.Refusebtn{
+    background-color: rgba(221, 99, 68, 0.642);
+    font-size: 100%;
+    width: 30%;
+    height: 5vh;
+    margin: 2%;
+    outline: transparent;
+    border: 0cap;
+    color: aliceblue;
+}
+.Refusebtn:hover{
+    box-shadow: 2px 3px 3px  rgba(221, 99, 68, 0.642);
+
+}
+.Refusebtn:active{
+    box-shadow: 0px 0px 0px  rgba(221, 99, 68, 0.642);
+
+}
+.Choisir_itinerairebtn{
+    background-color: rgb(36, 43, 95);
+    font-size: 100%;
+    width: 50%;
+    height: 5vh;
+    margin: 2%;
+    outline: transparent;
+    border: 0cap;
+    color: aliceblue;
+}
+.Choisir_itinerairebtn:hover{
+    box-shadow: 2px 3px 3px  rgba(36, 43, 95);
+
+}
+.Choisir_itinerairebtn:active{
+    box-shadow: 0px 0px 0px  rgba(36, 43, 95);
+
+}

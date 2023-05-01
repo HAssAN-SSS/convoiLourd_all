@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+.itineraire{
+    background-color: rgb(81, 83, 86);
+    border-radius: 7px;
+    padding-top: 0.5%;
+    /* box-shadow: 0px 0px 10px rgb(151, 150, 147); */
+    /* padding: 3%; */
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1vw;
+    
+}
+.itineraire:hover{
+    /* box-shadow: 0px 0px 0px rgb(151, 150, 147); */
+
+}
+.iti-data{
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+
+}
+.iti-data-item{
+    width: 45%;
+    display: flex;
+    flex-flow: column;
+    background-color:rgba(235, 235, 247,0.5);
+    border-radius: 7px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3%;
+    color: black;
+    /* padding: 3%; */
+}
+.iti-data-item:hover{
+    background-color:rgb(255, 255, 255);
+
+}
+.iti-data-item-data{
+    background-color: rgb(81, 83, 86);
+    margin: 4% 7%;
+    border-radius: 7px;
+    color: aliceblue;
+}
+.iti-shema{
+    /* background-color: aquamarine; */
+    width: 40%;
+    /* height: vh; */
+    background-image: url(../../../public/img/shemag.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.iti-data-icon-Capacite{
+    width: 50%;
+    height: 4vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 25%;
+    background-image: url(../../../public/img/stock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.iti-data-icon-Largeur{
+    width: 50%;
+    height: 4vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 25%;
+    background-image: url(../../../public/img/width.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.iti-data-icon-Geometry{
+    width: 50%;
+    height: 4vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 25%;
+    background-image: url(../../../public/img/geometry.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.iti-data-icon-Flux{
+    width: 50%;
+    height: 4vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 25%;
+    background-image: url(../../../public/img/agile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.iti-title{
+    /* background-color: aqua; */
+    text-align: center;
+    width: 20%;
+}
