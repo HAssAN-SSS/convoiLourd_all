@@ -3,7 +3,7 @@ import './aside.css'
 import { refusedFetch, store } from '../../store'
 import { useDispatch } from 'react-redux'
 import { sideOptActuel } from '../../store'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 // import { refusedFetch } from '../../store'
 import { todoFetch } from '../../store'
@@ -62,6 +62,7 @@ useEffect(() => {call = true})
                .then(data => {
                                 setSideData(() => data)
                                 Dispatch(fetchDone(data))
+                                console.log('data',data)
 
                                 // Dispatch(todoFetch(data))
                                 console.log('sideData fetch',data)
@@ -85,23 +86,29 @@ useEffect(() => {call = true})
         
 }
 // !=================================================
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^create demande^^^^^^^^^^^^^^^^^^^^^^^^^
+// !^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^create demande^^^^^^^^^^^^^^^^^^^^^^^^^
 function CreactDeamndeBtn() {
     return (
-        <button>
+        <div className='createDemandeBtn'>
             Create +
-        </button>
+        </div>
     )
 }
+function createDmdHandler() {
+    return(
 
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^create demande^^^^^^^^^^^^^^^^^^^^^^^^^
+        <Navigate to={`/:role/:id_user/:version/create`} />
+        )
+}
+
+// !^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^create demande^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 console.log('sideData',sideData)
     return(
         <div className="aside"  >
+            {params.role === 'client' ? <Link to={`/${params.role}/${params.id_user}/${params.version}/create`}> <CreactDeamndeBtn /></Link> : '' }
             {listOpt}
-            {params.role === 'client' ? <CreactDeamndeBtn /> : '' }
         </div>
     )
 }

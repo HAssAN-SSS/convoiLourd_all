@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import DemandeRoot from "./component/demande/demandeRoot";
 import { useState } from "react";
+import CreateDeamande from "./component/createDemande/createDemande";
 function App() {
   // let [storedata,setStoreData] = useState()
   return (
@@ -19,7 +20,7 @@ function App() {
           {/* <Route path="/:role/:id_user/:version/:sideOpt" element={<Layout />} /> */}
 
           <Route path="/:role/:id_user/:version/:id_demande/demande" element={ <DemandeRoot />} />
-
+          <Route path="/:role/:id_user/:version/create" element={<CreateDeamande /> } />
         </Routes>
       </BrowserRouter>
     </div>

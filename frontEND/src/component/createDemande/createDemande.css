@@ -1,0 +1,57 @@
+#type_operation{
+    font-size: large;
+    width: 50%;
+    /* margin-left: 2%; */
+}
+body{
+    margin: 0%;
+    box-sizing: border-box;
+}
+.createDemande-root{
+    width: 100%;
+    background-color: rgb(31, 33, 35);
+
+}
+.OperationInputs{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(60, 64, 69);
+    border-radius: 7px;
+    margin: 0.5%;
+}
+.rightSide-operationInfo{
+    display: flex;
+    flex-flow: column;
+    margin: 2% 1%;
+    color: aliceblue;
+}
+.vehicule-inputes{
+    width: 99.5%;
+    margin: 0.5%;
+}
+.leftSide-operationInfo{
+    width: 50%;
+}
+p{
+    color: aliceblue;
+    border-radius: 7px ;
+    border: solid 3px aliceblue;
+    padding: 2%;
+    font-size: large;
+
+}
+.submit-btn{
+    
+    width: 25%;
+    margin-left: 35.5%;
+    margin-top: 0;
+    background-color: rgb(151, 234, 206);
+    color: rgb(110, 128, 144);
+
+}
+.submit-btn:hover{
+    background-color: rgb(89, 190, 156);
+    box-shadow: 0px 0px 4px white;
+    color: aliceblue;
+
+}

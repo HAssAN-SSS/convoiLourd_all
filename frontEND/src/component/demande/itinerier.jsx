@@ -31,7 +31,7 @@ export default function Itineraire(props) {
                     <span className='iti-data-icon-Largeur'></span>
 
                     <span>Largeur: </span>
-                    <span className='iti-data-item-data'>{iti.largeure+'m'}</span>
+                    <span className='iti-data-item-data'>{iti.largeure}</span>
                 </div>
                 <div className='iti-data-item'>
 

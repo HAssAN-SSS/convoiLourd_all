@@ -391,10 +391,66 @@ BEGIN
 END 
 CALL client('4','client','start')
 -- =================================================client=====================
+INSERT INTO demande(date_operation,operation,point_sortie), user(name,age)
+VALUES('2023-08-09','Export',11),('alex',15)
+
+
+START TRANSACTION;
+
+INSERT INTO parent_table (date_operation,operation,point_sortie)
+VALUES ('2023-08-09','Export',11);
+
+INSERT INTO child_table1 (parent_id, child_column1)
+VALUES (LAST_INSERT_ID(), 'child_value1');
+
+INSERT INTO child_table2 (child_table1_id, child_column2)
+VALUES (LAST_INSERT_ID(), 'child_value2');
+
+COMMIT;
+
+--!------------------------------------------------------setData----------------------------
+DROP PROCEDURE IF EXISTS setData;
+CREATE PROCEDURE setData(
+    IN inlargeur INT,
+    IN inheuteur INT,
+    IN inlongueur INT,
+    IN inpoide INT,
+    IN inessieux INT,
+    IN inespacement_essieux INT,
+    IN intype_operation VARCHAR(11),
+    IN indate_operation DATETIME,
+    IN inpoint_sortie VARCHAR(11),
+    IN inmatricule VARCHAR(30),
+    IN idUser INT
+
+
+)
+BEGIN
+    DECLARE dmd_id INT;
+    DECLARE iti_id INT;
+
+    INSERT INTO demande (date_operation, operation, point_sortie,etap)
+    VALUES (indate_operation, intype_operation, inpoint_sortie,'register');
+    SET dmd_id = LAST_INSERT_ID();
+
+    INSERT INTO itineraire (id_demande)
+    VALUES (dmd_id);
+    SET iti_id = LAST_INSERT_ID();
+
+    INSERT INTO vehicule (matricule, largeur, hauteur, longueur, poid, essieux, espace_essieux, id_demande)
+    VALUES (inmatricule, inlargeur, inheuteur, inlongueur, inpoide, inessieux, inespacement_essieux, dmd_id);
+
+    UPDATE demande
+    SET id_vehicule = LAST_INSERT_ID(), id_iti = iti_id
+    WHERE id_demande = dmd_id;
+
+    INSERT INTO process (id_demande,id_user,type_process)
+    VALUES(dmd_id,idUser,'register');
+
+    SELECT 'dataSet success';
+END
 
 
 
 
-
-
-
+CALL setData(1,1,1,1,1,1,1,'2023-08-09',1,1,4);

@@ -64,7 +64,7 @@ export default function DemandeInfo(props) {
             .then((data) => {
                 console.log(data)
                     // Dispatch(validation())
-                setValido(data[0].access)
+                setValido(data.access)
                 // let valido = data[0].access
                 
                 // console.log(valido)
@@ -93,8 +93,8 @@ export default function DemandeInfo(props) {
             .then(respon => respon.json())
             .then((data) => {
                 console.log(data)
-                setValido(data[0].access)
-                console.log(valido)
+                setValido(data.access)
+                // console.log('valido',data)
 
             })
             .catch(err => console.log('validation error: ',err))

@@ -7,7 +7,7 @@ let params = useParams()
         <div className="navbar">
             <div className='nav-logo'>
                 <Link to={`/${params.role}/${params.id_user}/${params.version}`}>
-                    <img src="/img/tme.png" alt="logo" srcset="" width={'100%'} />
+                    <img src="/img/tme.png" alt="logo"  width={'100%'} />
                 
                 </Link>
 
