@@ -1,0 +1,26 @@
+.logout{
+    /* background-color: aliceblue; */
+    width: 20%;
+    text-align: center;
+    color: rgb(223, 229, 235);
+
+    
+}
+.logout-btn{
+    width: 30%;
+    height: 45%;
+    font-size: small;
+    margin: 0;
+    background-color: rgba(240, 248, 255, 0.022);
+    border: solid rgb(60, 64, 69);
+    color: rgb(223, 229, 235);
+}
+.logout-btn:hover{
+    
+    box-shadow: none;
+    cursor: pointer;
+    text-decoration: underline;
+    border: solid 0.5px rgb(235, 241, 249);
+
+   
+}

@@ -74,6 +74,13 @@ function todoReduer(state = initialState,action){
                         valido:true
                         }
                 )
+            case USER_INFO :
+                return (
+                        {
+                        ...state,
+                        user_info : action.paylod
+                        }
+                )
         default: return (state)
     }
 }
@@ -88,6 +95,7 @@ const PUT_DEMANDE_ACTUEL = 'PUT_DEMANDE_ACTUEL'
 const TODO_FETCH = 'TODO_FETCH'
 const REFUSED_FETCH = 'REFUSED_FETCH'
 const VALIDO_O_NO = 'VALIDO_O_NO'
+const USER_INFO = 'USER_INFO'
 export function fetchDone(data) {
     return(
         {
@@ -174,6 +182,16 @@ export function validation(respon) {
             {
                 type:VALIDO_O_NO,
                 paylod:respon
+            }
+            
+            )
+        }
+export function user_Info(respon_data) {
+    console.log('USER_INFO')
+    return(
+            {
+                type: USER_INFO ,
+                paylod : respon_data
             }
             
             )

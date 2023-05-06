@@ -7,22 +7,24 @@
     height: 85vh; */
     background-color: rgb(60, 64, 69);
     overflow-y: scroll;
-    font-size: 2vw;
+    font-size: large;
 }
 .main::-webkit-scrollbar{
-    width: 5px;
-    background-color: rgb(169, 172, 175);
+    background-color: rgb(60, 64, 69);
+    width: 7px;
+    border-radius: 7px;
+
 }
-.main::-webkit-scrollbar-track{
-    background-color: rgb(129, 131, 133);
-}
-/* .main::-webkit-scrollbar-thumb{
-    background-color: rgb(14, 56, 94);
+/* .main::-webkit-scrollbar-track{
+    background-color: rgb(24, 105, 185);
 } */
-.main::-webkit-scrollbar-button{
-    background-color: rgb(221, 223, 221);
-    border-radius: 12px;
+.main::-webkit-scrollbar-thumb{
+    background-color: rgba(157, 160, 162, 0.551);
+    border-radius: 7px;
 }
+/* .main::-webkit-scrollbar-button{
+    background-color: rgb(59, 203, 59);
+} */
 
 .demande{
     background-color:rgb(193, 193, 193);
@@ -113,9 +115,9 @@ a {
 }
 .dmd-item-data{
     color: rgb(18, 18, 18);
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(237, 236, 236, 0.759);
     border-radius: 7px;
-    font-size: 1.6vw;
+    font-size: medium;
     /* padding: 2%; */
     width: 80%;
     height: 7vh;

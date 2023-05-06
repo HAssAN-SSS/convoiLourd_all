@@ -8,7 +8,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 35% 65%;
-    grid-template-rows:7vh 1fr 1fr;
+    grid-template-rows:8.2vh 1fr 1fr;
     color: rgb(231, 242, 242);
 }
 .demandeinfo{

@@ -1,9 +1,15 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import './logging.css';
+import { user_Info } from '../../store'
+import { useDispatch } from 'react-redux'
+
+
+
 export default function Loggin () {
     let [userInfo,setUserInfo] = React.useState(null)
     let [letGo,setLetGo] = React.useState(false)
+    let Dispatch = useDispatch()
 
     let [loginValue,setLoginValue] = React.useState(
         {
@@ -11,8 +17,9 @@ export default function Loggin () {
             pass:''
         }
     )
-        console.log(userInfo)
-    function logBtn () {
+    
+    function logBtn (userInfo) {
+        console.log('userInfo')
         fetch('http://localhost:3001/login',
             {
                 method:'POST',
@@ -27,11 +34,12 @@ export default function Loggin () {
         )
           .then(response => response.json())
           .then(data => {
-              setUserInfo(data)
-              setLetGo(() => true)
+                setUserInfo(data)
+                Dispatch(user_Info(data))
+                setLetGo(() => true)
           })
           .catch(error => {
-            console.log('fetchError a hassan')
+            console.log('loggging error fetch:',error)
           });
         //   console.log(userInfo)
 

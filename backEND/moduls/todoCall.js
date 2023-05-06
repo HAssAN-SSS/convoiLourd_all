@@ -8,31 +8,62 @@ function todoCall(reqBody,res){
         port:'3306',
         database:'convoiLourd'
     })
+    // !^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^check version^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    let versionOk = null
+     function check_version(reqBody) {
+         dbConnection.query(`SELECT id_user FROM authentification WHERE VERSION = ${reqBody.version} AND date_authen_out IS NULL`,(err,dbRes,dields) => {
+            versionOk = dbRes
+            console.log('version test',reqBody.id_user)
+            console.log(' !error check_version',err)
+            try {
+
+                if (dbRes[0].id_user == reqBody.id_user) {
+    
+                    roleHunt(reqBody)
+                }
+            } catch (error) {
+                console.log('version no tiene access')
+            }
+            
+
+            
+        })
+        
+     }
+     check_version(reqBody)
+    // !^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^check version^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+// console.log('check_version',check_version(reqBody))
     // ---------------------------------------------roleHunt---------------------------------------------
     function roleHunt(reqBody) {
-        switch (reqBody.role) {
-            case 'tme' : todoCall_1('register')
-            break;
-            
-            case 'capt' : captTodoCall()
-            break;
+        // let go =  check_version(reqBody)
+        console.log('versionOk',versionOk)
+            // if(versionOk) {
 
-            case 'd_tech' : todoCall_1('v-capt')
-            break;
-
-            case 'exploi' : todoCall_1('v-d_tech')
-            break;
-
-            case 'terr' : todoCall_1('v-exploi')
-            break;
-
-            case 'client' : client(reqBody)
-            break;
-
-            default : console.log('no hay role para todo')
+                switch (reqBody.role) {
+                    case 'tme' : todoCall_1('register')
+                    break;
+                    
+                    case 'capt' : captTodoCall()
+                    break;
+                    
+                    case 'd_tech' : todoCall_1('v-capt')
+                    break;
+                    
+                    case 'exploi' : todoCall_1('v-d_tech')
+                    break;
+                    
+                    case 'terr' : todoCall_1('v-exploi')
+                    break;
+                    
+                    case 'client' : client(reqBody)
+                    break;
+                    
+                    default : console.log('no hay role para todo')
+                }
+            // }
         }
-    }
-    roleHunt(reqBody)
+    // roleHunt(reqBody)
+
     // ---------------------------------------------roleHunt---------------------------------------------
     // ================================================todoCall_1===========================================
     function todoCall_1(etapa) {

@@ -29,6 +29,7 @@ export default function Layout () {
                {
                    id_user:params.id_user,
                    role:params.role,
+                   version : params.version,
                    sideActuel:'start'
                   }
                   )

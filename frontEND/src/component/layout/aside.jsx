@@ -50,6 +50,7 @@ useEffect(() => {call = true})
                         {
                             id_user:params.id_user,
                             role:params.role,
+                            version : params.version,
                             sideActuel:store.getState().sideOptActuel
 
 

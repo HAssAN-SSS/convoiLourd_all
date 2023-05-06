@@ -8,6 +8,7 @@ let done = require('./moduls/done')
 let validate = require('./moduls/validate')
 let createDemande = require('./moduls/createDemande')
 const refusation = require('./refusation')
+const logOut = require('./moduls/logOut')
 let serrver = http.createServer((req,res) => {
     if(req.url === '/login') {
        userIn = Login(req,res)
@@ -84,6 +85,15 @@ let serrver = http.createServer((req,res) => {
     }
     else if (req.url === '/createDemande') {
         userIn = createDemande(req,res)
+       console.log(userIn)
+       res.writeHead(200,{
+        'Content-Type':'application/json',
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Methods': 'POST, GET, DELETE, PUT, OPTION '
+       })
+    }
+    else if (req.url === '/logout') {
+        userIn = logOut(req,res)
        console.log(userIn)
        res.writeHead(200,{
         'Content-Type':'application/json',
